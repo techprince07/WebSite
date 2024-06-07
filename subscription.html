@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCraft - サブスクリプション</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&vault=true&intent=subscription"></script>
+</head>
+<body>
+    <header>
+        <h1>TechCraft</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">ホームページ</a></li>
+                <li><a href="server-info.html">サーバー情報</a></li>
+                <li><a href="updates.html">更新情報</a></li>
+                <li><a href="donate.html">寄付・サポート</a></li>
+                <li><a href="subscription.html">サブスクリプション</a></li>
+                <li><a href="status.html">サーバーステータス</a></li>
+                <li><a href="terms.html">利用規約</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="subscription">
+            <h2>サブスクリプションプラン</h2>
+            <form id="subscription-form">
+                <label for="name">名前:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">メールアドレス:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="plan">プランの選択:</label>
+                <select id="plan" name="plan" required>
+                    <option value="MONTHLY_PLAN_ID">月額サブスクリプション - 500円/月</option>
+                    <option value="YEARLY_PLAN_ID">年額サブスクリプション - 1000円/年</option>
+                </select>
+            </form>
+            <div id="paypal-button-container"></div>
+        </section>
+    </main>
+
+    <script>
+        paypal.Buttons({
+            createSubscription: function(data, actions) {
+                const planId = document.getElementById('plan').value;
+                return actions.subscription.create({
+                    'plan_id': planId
+                });
+            },
+            onApprove: function(data, actions) {
+                alert('サブスクリプションが完了しました。ありがとうございます！');
+                document.getElementById('subscription-form').submit();
+            }
+        }).render('#paypal-button-container');
+    </script>
+</body>
+</html>

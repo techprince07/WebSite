@@ -1,0 +1,291 @@
+/* ベーススタイル */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f7ff;
+    color: #333;
+}
+
+header {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* メインコンテンツスタイル */
+main {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 1000px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+main h2 {
+    color: #0073e6;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main h3 {
+    color: #005bb5;
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section p {
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li h3 {
+    color: #005bb5;
+    margin-top: 10px;
+}
+
+li p {
+    margin-left: 20px;
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    main {
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+/* 利用規約ページ専用のスタイル */
+#terms ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#terms ul li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #e6f7ff;
+    border: 1px solid #0073e6;
+    border-radius: 5px;
+}
+
+#terms ul li h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+#terms ul li p {
+    margin: 5px 0 0 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    #terms ul li {
+        padding: 10px;
+    }
+
+    #terms ul li h3 {
+        font-size: 1em;
+    }
+
+    #terms ul li p {
+        font-size: 0.9em;
+    }
+}
+
+/* その他のスタイルは省略しています */
+
+/* サブスクリプション完了ページのスタイル */
+#subscription-confirmation {
+    text-align: center;
+    padding: 20px;
+    background-color: #e6f7ff;
+    border: 1px solid #0073e6;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#subscription-confirmation h2 {
+    color: #0073e6;
+    margin-bottom: 20px;
+}
+
+#subscription-confirmation p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #0073e6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #005bb5;
+}
+
+/* その他のスタイルは省略しています */
+
+/* 寄付完了ページのスタイル */
+#donation-confirmation {
+    text-align: center;
+    padding: 20px;
+    background-color: #e6f7ff;
+    border: 1px solid #0073e6;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#donation-confirmation h2 {
+    color: #0073e6;
+    margin-bottom: 20px;
+}
+
+#donation-confirmation p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #0073e6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #005bb5;
+}
+
+/* その他のスタイルは省略しています */
+
+/* フォームスタイル */
+form {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #0073e6;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    display: inline-block;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #005bb5;
+}
+
+/* 完了ページのスタイル */
+#donation-confirmation, #subscription-confirmation {
+    text-align: center;
+    padding: 20px;
+    background-color: #e6f7ff;
+    border: 1px solid #0073e6;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#donation-confirmation h2, #subscription-confirmation h2 {
+    color: #0073e6;
+    margin-bottom: 20px;
+}
+
+#donation-confirmation p, #subscription-confirmation p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #0073e6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #005bb5;
+}
